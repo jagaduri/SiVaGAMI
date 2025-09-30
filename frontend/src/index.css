@@ -1,0 +1,62 @@
+
+:root{--brand:#C8102E;--bg:#f7f7f8;--text:#111827;--muted:#6b7280;--card:#fff;--border:#e5e7eb}
+*{box-sizing:border-box} html,body,#root{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--text);background:var(--bg)}
+button{cursor:pointer} input,select,textarea{font:inherit}
+.app{display:flex;flex-direction:column;height:100%}
+.header{height:56px;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.header .logo{display:flex;align-items:center;gap:10px;font-weight:600}
+.header .logo .dot{width:20px;height:20px;border-radius:50%;background:#fff;opacity:.95}
+.header .right{display:flex;align-items:center;gap:12px}
+.body{display:flex;flex:1;min-height:0}
+.rail{width:320px;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.rail .section{padding:12px 14px;border-bottom:1px solid var(--border)}
+.rail .title{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.search{display:flex;gap:8px}
+.search input{flex:1;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:#fafafa}
+.search button{padding:8px 12px;border-radius:8px;background:var(--brand);border:none;color:#fff}
+.history{flex:1;overflow:auto}
+.history .item{display:flex;gap:10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer}
+.history .item:hover{background:#fafafa}
+.badge{background:#fee2e2;color:#991b1b;border-radius:999px;padding:2px 8px;font-size:12px}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.hero{padding:28px 28px 8px}
+.hero h1{font-size:28px;margin:0 0 6px}.hero p{color:var(--muted);margin:0}
+.ask{padding:0 28px 12px}.ask .box{display:flex;gap:8px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px}
+.ask input{flex:1;padding:10px;border:none;outline:none}.ask button{padding:10px 16px;border:none;border-radius:8px;background:var(--brand);color:#fff}
+.chatWrap{flex:1;display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:0 28px 20px}
+.chat{background:#fff;border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;overflow:hidden}
+.messages{flex:1;overflow:auto;padding:16px}.msg{margin-bottom:10px}.msg .bubble{display:inline-block;padding:10px 12px;border-radius:12px;background:#f3f4f6}
+.msg.user{text-align:right}.msg.user .bubble{background:#e11d48;color:#fff}
+.tools{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px}
+.tools .row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.footer{height:34px;display:flex;align-items:center;justify-content:center;color:#6b7280;font-size:12px}
+.header-row {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:8px 10px; border-bottom:1px solid var(--border);
+}
+.btn-new { padding:6px 10px; font-size:13px; border-radius:6px; background:var(--brand); color:#fff; border:none; }
+.btn-new:hover { opacity:.95; }
+
+.search-input { width:100%; padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+
+.history .item {
+  position:relative;
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.history .item:hover { background:#fafafa; }
+.dot { width:10px; height:10px; border-radius:50%; background:#ef4444; }
+.meta { flex:1; min-width:0; cursor:pointer; }
+.title-text { font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.last-text { font-size:12px; color:#6b7280; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* action chips show on hover */
+.actions { display:flex; gap:6px; opacity:0; transition:opacity .15s ease; }
+.history .item:hover .actions { opacity:1; }
+.chip {
+  font-size:12px; padding:2px 8px; border-radius:999px;
+  border:1px solid #d1d5db; background:#fff; cursor:pointer;
+}
+.chip:hover { background:#f3f4f6; }
+.chip.danger { color:#b91c1c; border-color:#fecaca; }
+.chip.danger:hover { background:#fee2e2; }
